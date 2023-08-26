@@ -1,0 +1,27 @@
+{
+  "name": "toolspritesheettojson",
+  "version": "1.0.0",
+  "description": "Export file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TKOGNISHU/ToolSpriteSheetToJSON.git"
+  },
+  "keywords": [
+    "js",
+    "nodejs",
+    "fs"
+  ],
+  "author": "Chi HOa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TKOGNISHU/ToolSpriteSheetToJSON/issues"
+  },
+  "homepage": "https://github.com/TKOGNISHU/ToolSpriteSheetToJSON#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
