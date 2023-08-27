@@ -41,7 +41,7 @@ const frameConfig = {
 }
 
 const animationItem = {
-  key: spriteSheetName, //string | undefined, The key that the animation will be associated with. i.e. sprite.animations.play(key)
+  key: `animation_key`, //string | undefined, The key that the animation will be associated with. i.e. sprite.animations.play(key)
   frames: [spriteSheetName, {...frameConfig}],/*string | Phaser.Types.Animations.AnimationFrame[] | undefined,
       Either a string, in which case it will use all frames from a texture with the matching key, or an array of Animation Frame configuration objects.*/
   frameRate: 10, //number | undefined, The frame rate of playback in frames per second (default 24 if duration is null)
@@ -65,8 +65,11 @@ for (let frameIndex = 0; frameIndex < frameLengthX * frameLengthY; frameIndex +=
   item.frames = [spriteSheetName, {...frameConfig}]
   item.frames[1].start = frameIndex
   item.frames[1].end = frameIndex + frameLengthX - 1
+
+  const keyAnims = `activity-${Math.floor(frameIndex / frameLengthY)}`
+  item.key = keyAnims
   
-  textExport.animation[`activity-${Math.floor(frameIndex / frameLengthY)}`] = item
+  textExport.animation[keyAnims] = item
 }
 console.log(JSON.stringify(textExport))
 
